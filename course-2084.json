@@ -2,7 +2,7 @@
   "schema": 1,
   "courseId": 2084,
   "repository": "LearningOS/2026a-rustling-yanghaojy32",
-  "commit": "324b51c30dff8103e43e9cb70ff2e367d455a250",
+  "commit": "58856f4dd2c6ea5a47bd1c087f9e4194d89650df",
   "score": 45,
   "totalScore": 110,
   "exercises": [
@@ -778,9 +778,9 @@
     }
   ],
   "student": "yanghaojy32",
-  "runId": "38543742698",
+  "runId": "38543911752",
   "runAttempt": "1",
   "upload": {
-    "status": "accepted"
+    "status": "pending"
   }
 }
