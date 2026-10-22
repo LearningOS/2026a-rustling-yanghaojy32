@@ -19,15 +19,21 @@
 // Execute `rustlings hint errors2` or use the `hint` watch subcommand for a
 // hint.
 
-// I AM NOT DONE
 
 use std::num::ParseIntError;
 
 pub fn total_cost(item_quantity: &str) -> Result<i32, ParseIntError> {
     let processing_fee = 1;
     let cost_per_item = 5;
-    let qty = item_quantity.parse::<i32>();
-
+    // `?` 是一个错误传播运算符，它会尝试从 Result 中提取 Ok 值，
+    // 如果是 Err，则立即从当前函数返回该错误。
+    // 下面这行使用 `?` 相当于手写一个 match 表达式来处理 Result：
+    //
+    // let qty = match item_quantity.parse::<i32>() {
+    //     Ok(n) => n,        // 解析成功，取出内部的 i32 值
+    //     Err(e) => return Err(e), // 解析失败，提前返回错误
+    // };
+    let qty = item_quantity.parse::<i32>()?;
     Ok(qty * cost_per_item + processing_fee)
 }
 
